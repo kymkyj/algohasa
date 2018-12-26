@@ -13,7 +13,7 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
 	for(int i=1;i<=n;i++) { // 줄을 표현해준다. i가 1이면 첫번째 줄, i가 2면 두번째 줄, i가 3이면 세번째 줄 이다. 
-		for (int j = 1; j <= i; ++j) {
+		for (int j = 1; j <= i; ++j) { // *을 1개부터 천천히 커지면서 출력 
             System.out.print("*");
         }
         System.out.println();
