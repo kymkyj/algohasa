@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class chap3_1924 {
 	/*
@@ -11,7 +12,20 @@ public class chap3_1924 {
 		출력
 		첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.
 	 */
-	public static void main(String[] args) {
-		
-	}
+		    public static void main(String[] args) {
+		        Scanner sc = new Scanner(System.in);
+		        int month = sc.nextInt();
+		        int day = sc.nextInt();
+		        sc.close();
+		         
+		        int[] InDay = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		        String[] dayOfTheWeeks = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+		         
+		        int totalDays = day;
+		        for (int i = 0; i < month - 1; ++i) {
+		            totalDays += InDay[i];
+		        }
+		         
+		        System.out.println(dayOfTheWeeks[totalDays % 7]);
+		    }
 }
