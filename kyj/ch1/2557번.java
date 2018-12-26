@@ -1,6 +1,6 @@
 package Baekjoon;
 
-// Hello World!를 출력하시오.
+// Hello World
 
 public class Main {
 	public static void main(String[] args) {
