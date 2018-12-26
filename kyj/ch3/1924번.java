@@ -17,7 +17,7 @@ public class Main {
 		Scanner sc= new Scanner(System.in);
 		int x=sc.nextInt(); // x를 달로 선언
 		int y=sc.nextInt(); // y를 일로 선언 
-		int cnt= 0;
+		//int cnt= 0; 
 		sc.close();
 		
 		int [] month = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
