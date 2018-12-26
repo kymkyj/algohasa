@@ -21,7 +21,7 @@ public class Main {
 			result += Integer.parseInt(tmp.substring(i, i+1));  // Integer.ParseInt로 정수형으로 변환후 tmp(문자)를 substring으로 i를 자른다 
 																// 시작과 끝을 지정해준다 
 		}
-		System.out.println(result);
+		System.out.println(result); 
 		sc.close();
 		
 	}

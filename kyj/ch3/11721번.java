@@ -18,7 +18,7 @@ public class Main {
 	for(int i=0; i <tmp.length(); ++i) { // 글자수의 길이만큼 반복문을 돌린다.
 		System.out.print(tmp.charAt(i)); // CharAt(index) 해당 위치의 문자를 chat형으로 반환한다. 
 		if(i % 10 == 9 ) { // 10의 배수가 될때마다 개행한다. 
-			System.out.println(); // 개행 
+			System.out.println(); // 개행  
 			}
 		}
 	}

@@ -13,6 +13,6 @@ public class Main {
 		
 		sc.close();
 		
-		System.out.println(a+b);
+		System.out.println(a+b); 
 	}
 }

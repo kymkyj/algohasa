@@ -15,7 +15,7 @@ public class Main {
         while(sc.hasNextLine()) {
             String str=sc.nextLine();
             if(!(str.isEmpty() | str.length()>100)) {
-                System.out.println(str);
+                System.out.println(str); 
             }
         }
     }

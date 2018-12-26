@@ -14,7 +14,7 @@ public class Main {
 		int n=sc.nextInt();
 		sc.close();
 		for(int i=1;i<=n;n--) { // n부터 1까지므로 n을 기준으로 --연산
-			System.out.printf("%d%n",n);
+			System.out.printf("%d%n",n); 
 		}
 	}
 }

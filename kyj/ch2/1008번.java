@@ -14,6 +14,6 @@ public class Main {
 		double a=sc.nextDouble();
 		double b=sc.nextDouble();
 		sc.close();
-		System.out.println(a/b);
+		System.out.println(a/b); 
 	}
 }

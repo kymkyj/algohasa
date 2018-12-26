@@ -13,7 +13,7 @@ public class Main {
 	        System.out.println(a-b);
 	        System.out.println(a*b);
 	        System.out.println(a/b);
-	        System.out.println(a%b);
+	        System.out.println(a%b); 
 	     /*if(a>b && !(b==0)) {
             System.out.println(a+"을"+b+"으로 나눈몫은"+a/b+"입니다");
 	     	System.out.println(a+"을"+b+"으로 나눈 나머지는"+a%b+"입니다");

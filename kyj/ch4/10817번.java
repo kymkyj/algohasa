@@ -17,7 +17,7 @@ public class Main {
 		int mid=0; // mid(중간값)을 선언한다 
 //		int[] array = new int [3] 3개의 정수가 있는 배열을 선언한다. 
 //		for(int i=0 i<array.length; i++) { 배열의 길이만큼 반복문을 돈다.
-//		array[i] = sc.nextInt(); // 배열에서 다음값이 있으면 다음 정수를 가져온다. 
+//		array[i] = sc.nextInt(); // 배열에서 다음값이 있으면 다음 정수를 가져온다.  
 //		}
 		sc.close();
 //		Arrays.sort(array); sort를 통해 배열의 크기순대로 정렬한다.

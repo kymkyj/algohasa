@@ -13,7 +13,7 @@ public class Main {
 			score=sc.nextInt(); // 다음 점수가 있으면 읽어온다.(2)
 			total += score; // 총점에 시험점수를 더한다 (1) 을 반복한다. 
 			if(score > max) { // 시험점수가 최대값보다 커지게 되면 
-				max = score; // 최대값에 시험점수를 대입한다. 
+				max = score; // 최대값에 시험점수를 대입한다.  
 			}	
 		}
 		sc.close();

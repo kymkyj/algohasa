@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
  * 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
- * 별찍기 2번 문제와 유사한 문제 (응용) 
+ * 별찍기 2번 문제와 유사한 문제 (응용)  
  */
 public class Main {
 	public static void main(String[] args) {

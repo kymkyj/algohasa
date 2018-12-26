@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * 첫째 줄에 시험 점수가 주어진다. 시험 점수는 0보다 크거나 같고, 100보다 작거나 같은 자연수이다.
- * 시험 성적을 출력한다.
+ * 시험 성적을 출력한다. 
  */
 public class Main {
 	public static void main(String[] args) {

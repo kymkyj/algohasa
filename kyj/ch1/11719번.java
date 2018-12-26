@@ -16,7 +16,7 @@ public class Main {
 	        
 	    while(sc.hasNextLine()){
 	        String str=sc.nextLine();
-	        System.out.println(str);
+	        System.out.println(str); 
 	        
 	        }
 	    }

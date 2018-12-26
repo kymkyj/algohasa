@@ -18,7 +18,7 @@ import java.io.OutputStreamWriter;
 public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); // 선언 
-		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out)); // 선언
+		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out)); // 선언 
 		
 		// Tip:
 		// Scanner와 BufferedReader, BufferedWriter이 다른점은 Scanner은 엔터와 스페이스 모두 경계로 인식하기에 사용하기에는 편리하지만

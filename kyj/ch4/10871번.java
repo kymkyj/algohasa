@@ -15,7 +15,7 @@ public class Main {
 		Scanner sc= new Scanner(System.in);
 		int n=sc.nextInt(); 
 		int x=sc.nextInt(); // >> 정수 n과 x를 각각 선언함 
-		int [] a= new int[n]; // 수열(배열) a를 이루는 정수 n개 >> 가변배열 
+		int [] a= new int[n]; // 수열(배열) a를 이루는 정수 n개 >> 가변배열  
 		for(int i=0; i<a.length; ++i) { // 배열(수열)의 길이만큼 반복문을 돈다.
 			a[i] = sc.nextInt(); // 다음 정수값이 있으면 a[i] 배열 안에 집어넣는다.
 		}
