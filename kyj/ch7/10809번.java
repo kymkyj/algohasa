@@ -20,8 +20,8 @@ public class Main {
 	    public static void main(String[] args) {
 	        Scanner sc = new Scanner(System.in);
 	         
-	        int[] alphabet = new int[26];
-	        Arrays.fill(alphabet, -1);
+	        int[] alphabet = new int[26]; // 알파벳은 총 26개 이므로 크기가 26인 배열 선언 
+	        Arrays.fill(alphabet, -1); // 초기 배열의 모든 요소를 -1로 삽입하기 위해 Arrays.fill()메서드를 사용하였다. 
 	         
 	        String str = sc.nextLine();
 	        int sz = str.length();
