@@ -46,7 +46,7 @@ public class Main {
 		String input = sc.next();
 		
 		
-		for(int i=0; i<input.length(); i++) { // 배열의 크기만큼 반복문을 돌린다. 
+		for(int i=0; i<8; i++) { // 배열의 크기(8)만큼 반복문을 돌린다. 
 			//if(input.contains(croatia[i])) { // 크로아티아 문자열을 가지고 있으면 
 				input = input.replace(croatia[i], "a"); // 문자열 croatia[]의 요소들을 전부 알파벳 "a" 로 바꾸기
 				sc.close();		
@@ -57,3 +57,4 @@ public class Main {
 //}
 // 풀이는 맞는것 같으나..2가 아닌 2, 2 이런식으로 연속으로 출력이 된다.
 // 해결 : if(input.contains(croatia[i])) { // 주석처리 하니 해결되었다.. 이유는 모르겠다.. 
+// 반복문을 돌릴때 input.length()로 돌리려고 했으나 +, =까지 문자로 인식해서 크로아티아 문자 배열의 크기인 8만큼 반복문을 돌렸다. why?
