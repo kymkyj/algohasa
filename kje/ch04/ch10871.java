@@ -13,7 +13,7 @@ public class ch10871 {
 		for(int i=0;i<tc;i++) {
 			arr[i] = sc.nextInt();
 		}
-		for(int i=0; i<tc;i++) {
+		for(int i=0; i<tc;i++) {s
 			if(arr[i]<tmp) {
 				 System.out.print(arr[i]+" ");
 			}
