@@ -23,8 +23,38 @@ import java.util.Scanner;
  *  why? 
  *  12(공차1) 13(공차2) 14(공차3) 15(공차4) .... 21(공차-1) 22(공차0) 23(공차1) 24(공차2) .... 99(공차0) 
  *  즉 1자리수와 2자리수의 한수의 총 개수는 99개 이다. 
+ *  
+ *  세자리수 부터는 자리수 마다 쪼개어 a, b, c 로 지정한 후에 각자리수의 차가 같은지 확인해 보면 된다. 
 
  */
+
+public class Main{
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		int n=sc.nextInt();
+		int cnt =0;
+		
+		if(n<100) {
+			System.out.println(n);
+			return;
+		}
+		cnt = 99;	// 100 이전까지는 모두 한수 이므로 99개 
+		
+		for(int i=100; i<=n; i++) {
+			int a = i / 100;
+			int b= (i/10) % 10;
+			int c= i % 10;		// 100 이상부터 n 까지 3자리 숫자는  각각의 자리수를 쪼개서 a, b, c 로 지정하고
+			
+			if(a-b==b-c) 	// 각자리의 수의 차가 같은지 확인하면 된다.  같으면 한수이다 
+				cnt++;
+		}
+			System.out.println(cnt);
+			sc.close();
+		}
+	}
+
+/*
 public class Main {	 
 	 public static void main(String[] args) {
 	     Scanner sc = new Scanner(System.in);
@@ -57,4 +87,4 @@ public class Main {
 	        return 0;
 	    }
 	}
-
+*/
