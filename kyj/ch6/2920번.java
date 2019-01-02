@@ -18,26 +18,33 @@ import java.util.Scanner;
  * 
  * #1 (직접 int형 배열에 입력값을 저장하여 값을 구하는 방법)
  * #2 (다른 사람 코드 : split()을 이용해 String 형에 저장된 입력값을 구하는 방법이다)
+ * 
+ * 해결 방법 :
+ * 1부터 8까지 무조건 한번씩 등장하기 때문에
+ * ascending를 만족하는 조건은 1,2,3,4,5,6,7,8 밖에 없으며
+ * 반대로 descending를 만족하는 조건 역시 8로 시작해서 내려오는 것이기 때문에 만족하는 조건은
+ * 8,7,6,5,4,3,2,1 밖에 없다
+ * 
  */
 
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 		
-		int arr[] = new int [8];
-		int asc =0 ,desc=0, mix=0;
+		int arr[] = new int [8]; // 8개의 음이므로 길이가 8인 배열 선언 
+		int asc =0 ,desc=0, mix=0; // 간편하게 asc, desc, mix로 각각 선언 
 		
-		for(int i=0; i<arr.length; i++) {
-			arr[i]=sc.nextInt();
+		for(int i=0; i<arr.length; i++) { // 배열의 길이만큼 반복문을 돈다  
+			arr[i]=sc.nextInt(); // 배열안의 다음 정수가 있으면 값을 읽어온다. 
 			
-			if(i+1 == arr[i]) {
-				asc++;
-			}else if(8-i == arr[i]){
-				desc++;
+			if(i+1 == arr[i]) { // i+1 == arr[i] >> a[0]=1 , a[1]=2 , a[2]=3 .....
+				asc++; // 카운트 
+			}else if(8-i == arr[i]){ // 8-i == arr[i] >> a[0]=8, a[1]=7, a[2]=6 .......
+				desc++; // 카운트 
 			}
 		}
-		if(asc==8) {
-			System.out.println("ascending");
+		if(asc==8) { 
+			System.out.println("ascending"); 
 		}else if(desc==8) {
 			System.out.println("descending");
 		}else {
