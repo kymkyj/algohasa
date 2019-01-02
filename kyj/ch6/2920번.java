@@ -15,9 +15,12 @@ import java.util.Scanner;
  * 첫째 줄에 ascending, descending, mixed 중 하나를 출력한다.
  * 
  * 주어진 배열이 오름차순인지 아닌지를 확인하는 문제이다. 
+ * 
+ * #1 (직접 int형 배열에 입력값을 저장하여 값을 구하는 방법)
+ * #2 (다른 사람 코드 : split()을 이용해 String 형에 저장된 입력값을 구하는 방법이다)
  */
 
-public class Main {
+public class 음계 {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 		
@@ -42,3 +45,43 @@ public class Main {
 		}
 	}
 }
+
+//*************************************************************************************************************************
+
+/*
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+    	int t=0;
+    	int[] c = new int[8];
+    	Scanner sc = new Scanner(System.in);
+    	String a = sc.nextLine();
+    	for(int i=0; i<8; i++) {
+    		String b[] = a.split(" ");
+    		c[i] = Integer.parseInt(b[i]);
+    		
+    	}  
+    	for(int i=0; i<8; i++) {
+    		if(i<7) {
+    		if((c[i]+1)==c[i+1]) {
+    			t=0;
+    		}else if((c[i]-1)==c[i+1]) {
+    			t=1;
+    		}else {
+    			t=2;
+    			i=8;
+    	}
+    		}
+    	}
+    	if(t==0) {
+    		System.out.print("ascending");
+    	}else if(t==1) {
+    		System.out.print("descending");
+    	}else {
+    		System.out.print("mixed");
+    	}
+}
+}
+*/
