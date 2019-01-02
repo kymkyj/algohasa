@@ -29,28 +29,28 @@ OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
 	'O' 가 될 때마다 count를 전위증가(++count) 한 후 total에 더해주었습니다.
  */
 
-public class Main {
+public class OX퀴즈 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int N =sc.nextInt();
-		String [] cases = new String[N];
+		String [] cases = new String[N]; // 선언 
 		for (int i = 0; i < N; i++) {
-            cases[i] = sc.next();
+            cases[i] = sc.next(); // O인지, X인지 ,연속된 것인지 구분해야 하므로 문자 하나하나를 봐야하기 때문에 next()로 받는다. 
         }
         sc.close();
         
         int count, total;
-        for (String OXresult : cases) {
+        for (String OXresult : cases) { // 배열에서 사용할수 있는 반복문의 표현 cases 배열의 수만큼 반복문을 돌린다. 
             count = 0;
             total = 0;
             for (int i = 0; i < OXresult.length(); ++i) {
-                if (OXresult.charAt(i) == 'O') {
-                    total += ++count;
+                if (OXresult.charAt(i) == 'O') { // 정답일 경우 
+                    total += ++count; // 카운트를 올린다.
                 } else {
-                    count = 0;
+                    count = 0; // 그렇지 않을경우 0
                 }
             }
-            System.out.println(total);
+            System.out.println(total); // 출력 
         }
 	}
 }
