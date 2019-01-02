@@ -20,7 +20,7 @@ import java.util.Scanner;
  * #2 (다른 사람 코드 : split()을 이용해 String 형에 저장된 입력값을 구하는 방법이다)
  */
 
-public class 음계 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 		
