@@ -59,7 +59,7 @@ public class Main {
 		}
 		int temp = cntOfGroup; // temp는 현재 그룹의 분수의 갯수 
 		int A = 1;
-		for(int i= (sum-cntOfGroup)+1; i<n; i++) {
+		for(int i= (sum-cntOfGroup)+1; i<n; i++) { // 분수의 갯수의 합 - 현재의 개수의 합 +1 만큼 반복문을 돌린다 
 			cntOfGroup--;
 			A++;
 		}
