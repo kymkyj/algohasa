@@ -63,6 +63,7 @@ public class Main {
 			cntOfGroup--;
 			A++;
 		}
-		System.out.println(temp%2 !=0 ? cntOfGroup + "/" + A : A + "/" + cntOfGroup);
+		System.out.println(temp%2 !=0 ? cntOfGroup + "/" + A : A + "/" + cntOfGroup); // temp°¡ È¦¼ö¸é cntOfGroup + "/" + A
+																					  // temp°¡ Â¦¼ö¸é A + "/" + cntOfgroup
 	}
 }
