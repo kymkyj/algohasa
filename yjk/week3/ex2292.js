@@ -15,27 +15,18 @@ function countPassByRoom(num) {
   }
 
   var offset = 6;
-  var passCnt = 0;
+  var passCnt = 1;
 
-  //1-7(6) 나 포함이기때문에 1을 제외하고는 2번부터 시작. 7-19(12) 1번 방포함 3번, 20-38(18) 1번 방 포함 4번 39-58(21) 1번 방 포함 5번...
-  for(roomCnt = 1; roomCnt<=num; roomCnt++) {
-    passCnt++; // 무조건 for문 들어오면 1씩 증가
-    if(num > 1) {
-      var lange = offset * passCnt + roomCnt;
-      if(lange > num) { // 범위가 입력 받은 숫자보다 커야 체크 가능
-        while(roomCnt <= lange) {
-          if(roomCnt == num) {
-            // 멈춘다. 그리고 for문도 빠져 나옴.
-            passCnt = num === 1 ? passCnt : passCnt + 1;
-            break;
-          }
-          roomCnt++;
-        }
-      }
-    } else {
-      break;
-    }
-    roomCnt = lange; // 범위
+  if(num === 1) {
+    console.log('1');
+    return false;
   }
+
+  var roomCnt=2;
+
+  while(roomCnt<=num) {
+    roomCnt += offset*passCnt++;
+  }
+
   console.log(passCnt);
 }
