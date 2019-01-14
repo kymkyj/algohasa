@@ -11,33 +11,28 @@
 // 각 테스트 케이스에 대해 P를 출력한다.
 
 var fs = require('fs');
-// var input = fs.readFileSync('/dev/stdin');
 var input = fs.readFileSync('test/input.txt');
 var inputArr = input.toString().split('\n');
 var T = parseInt(inputArr[0]);
 var P = '';
 
-if(T === 0 || T > 1000) {
-  return false;
-}
-
-for(var i=1; i<=T; i++) {
+if(T > 0 && T <= 1000) {
+  for(var i=1; i<=T; i++) {
   var P = '';
-  var R = parseInt(inputArr[i].split(' ')[0]);
+  var R = inputArr[i].split(' ')[0];
+  var rNum = parseInt(R);
   var S = inputArr[i].split(' ')[1];
 
-  if(R === 0 || R> 8) {
-    return false;
-  }
-  if(S.length === 0 || S.length > 20 || !/([\\$%*+-./:A-Z0-9])/.test(S)) {
-    return false;
-  }
-
-  var sArr = S.split('');
-  for(var sIdx = 0; sIdx<sArr.length; sIdx++) {
-    for(var j=0; j<R; j++) {
-      P += sArr[sIdx];
+  if(rNum > 0 && rNum <= 8) {
+    if(S.length > 0 && S.length <= 20 && /([\\$%*+-./:A-Z0-9])/.test(S)) {
+      var sArr = S.split('');
+      for(var sIdx = 0; sIdx<sArr.length; sIdx++) {
+        for(var j=0; j<rNum; j++) {
+          P += sArr[sIdx];
+        }
+      }
+        console.log(P);
+      }
     }
   }
-  console.log(P);
 }
