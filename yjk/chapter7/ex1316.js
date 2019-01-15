@@ -35,11 +35,10 @@ for(var i=1; i<=wordCnt; i++) {
       dup.push(wordArr[j]);
     }
   }
-
+ console.log('dup:',dup);
   for(var k =0; k<dup.length; k++) {
-    wordArr.indexOf(dup[k]), wordArr.lastIndexOf(dup[k])
+    word.substring(wordArr.indexOf(dup[k]), wordArr.lastIndexOf(dup[k]));
+    console.log(word);
   }
   console.log(wordArr);
-  
-
 }
