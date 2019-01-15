@@ -66,7 +66,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
  
-public class 조세퍼스문제011866 {
+public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // 선언 
         String[] input = reader.readLine().split(" ");
