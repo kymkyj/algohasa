@@ -37,7 +37,7 @@ import java.util.Stack;
 	()()()()(()()())() >> YES
 	(()((())()( >> NO 
  */
-public class °ýÈ£9012 {
+public class Main {
 	public static void main(String[] args) throws  IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 	// ¼±¾ð 
 		
