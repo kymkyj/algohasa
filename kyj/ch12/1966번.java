@@ -94,8 +94,8 @@ public class 프린터큐1966 {
             int order = 0; // 출력 횟수
             int calCount = 0; // 입력 순서에 맞춰서 순서를 기억하기 위한 변수
             
-            while(true) {
-                int pollNum = importance.poll();
+            while(true) { // 무한 반복문 
+                int pollNum = importance.poll(); // 중요도가 들어간 배열을 poll한 pollNum 을 선언 
                 
                 if(calCount == wantToKnowNumOrder) { // 큐에서 out 될 때 알고싶은 00번째 수를 알 수 있다. 
                     pollNum += 101; // 주어지는 수가 100이하이므로 다른 위치에 똑같은 중요도가 나오더라도 다른 점수로 만들어줌
