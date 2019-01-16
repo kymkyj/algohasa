@@ -62,31 +62,31 @@ import java.util.StringTokenizer;
  */
 
 
-public class Main {
+public class 프린터큐1966 {
 	 
     static StringTokenizer st;
-    static Queue<Integer> importance;
+    static Queue<Integer> importance; // 중요도를 가지는 큐를 선언
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); 
-        st = new StringTokenizer(br.readLine());
+        st = new StringTokenizer(br.readLine()); // StringTokenizer로 구분 
     
-        int testCase = Integer.parseInt(st.nextToken());
+        int testCase = Integer.parseInt(st.nextToken()); // 테스트 케이스 선언 
         
-        for(int t=0; t<testCase; t++) {
-            st = new StringTokenizer(br.readLine());
-            int docCount = Integer.parseInt(st.nextToken());
-            int wantToKnowNumOrder = Integer.parseInt(st.nextToken());
+        for(int t=0; t<testCase; t++) { // 테스트 케이스 만큼 반복문을 돌린다. 
+            st = new StringTokenizer(br.readLine()); // st로 StringTokenizer를 받아 값들을 읽어온다. 
+            int docCount = Integer.parseInt(st.nextToken()); // 문서의 수 
+            int wantToKnowNumOrder = Integer.parseInt(st.nextToken()); // 몇번째로 위치하고 있는지? 
             importance = new LinkedList<Integer>(); // 중요도가 들어간 배열 // LinkedList에 우선순위 값으로 저장
             int[] sortedArray = new int[docCount]; // 중요도를 오름차순으로 정렬하기 위한 배열
             
             
             
             st = new StringTokenizer(br.readLine());
-            for(int i=0; i< docCount; i++) {
-                int importanceNum = Integer.parseInt(st.nextToken());
-                importance.add(importanceNum);
-                sortedArray[i] = importanceNum;
+            for(int i=0; i< docCount; i++) { // 반복문을 돌려 문서를 읽어온다음 
+                int importanceNum = Integer.parseInt(st.nextToken()); // 중요넘버를 선언해서 
+                importance.add(importanceNum); // 중요넘버를 중요도가 들어간 배열에 담아서 
+                sortedArray[i] = importanceNum; // 오름차순으로 정렬된 배열에 담는다 
             }
             Arrays.sort(sortedArray); // 중요한 것부터 출력하기 위해 따로 배열을 만들어 오름차순 정렬
             
@@ -103,14 +103,14 @@ public class Main {
                 calCount++;
                 
                 if(sortedArray[importanceOrder] == pollNum-101) { // 알고 싶은 수의 중요도만 101을 넘어가기 때문에 해당 숫자가 나오면 끝.
-                    order++;
-                    bw.write(String.valueOf(order));
+                    order++; // 출력횟수 ++ 
+                    bw.write(String.valueOf(order)); 
                     bw.newLine();
                     break;
                     
                 }else if(sortedArray[importanceOrder] == pollNum){ // 중요도가 높은 것이 출력되면 다음 중요도가 높은 것으로 이동
-                    order++;
-                    importanceOrder--;
+                    order++; // 출력횟수 ++
+                    importanceOrder--; // 중요도 순서 -- 
                 }else {
                     importance.add(pollNum); // 어느 해당 사항도 없으면 다시 큐 맨 뒤로 추가해준다
                 }
